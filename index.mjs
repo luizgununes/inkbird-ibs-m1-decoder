@@ -114,7 +114,7 @@ async function getRequestSign(
 // I don't know if this will work for your device, if won't, change the value until it matches.
 function parsePoolTemperature(input) {
   let bytesSensor = Buffer.from(input, "base64");
-  let temperature = { sensor: (bytesSensor[50] + bytesSensor[51]) / 10};
+  let temperature = { sensor: (bytesSensor[51] + bytesSensor[15]) / 10};
   return temperature;
 }
 
